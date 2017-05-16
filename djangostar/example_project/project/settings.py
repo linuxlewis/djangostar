@@ -8,7 +8,8 @@ env = Env()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'name': 'project'
+        'NAME': 'project',
+        'HOST': 'localhost'
 
     }
 }

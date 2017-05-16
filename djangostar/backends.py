@@ -1,5 +1,3 @@
-from uuid import uuid4
-
 from apistar.settings import Settings
 from django import setup
 from django.conf import settings as django_settings
@@ -12,8 +10,8 @@ class DjangoBackend(object):
 
     @classmethod
     def build(cls, settings: Settings):
-        django_settings.configure(SECRET_KEY=settings.get('SECRET_KEY'),
-                                  INSTALLED_APPS=settings.get('INSTALLED_APPS'),
+        # SECRET_KEY=settings.get('SECRET_KEY'),
+        django_settings.configure(INSTALLED_APPS=settings.get('INSTALLED_APPS'),
                                   DATABASES=settings.get('DATABASES'))
         setup()
         return cls()
