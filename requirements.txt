@@ -1,2 +1,3 @@
 apistar
 django
+psycopg2

@@ -5,17 +5,5 @@ class Env(environment.Environment):
 
 env = Env()
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'project',
-        'HOST': 'localhost'
 
-    }
-}
 
-INSTALLED_APPS = [
-    'project'
-]
-
-SECRET_KEY = env['SECRET_KEY']
